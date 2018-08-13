@@ -19,7 +19,7 @@
 							<el-menu-item-group>
 								<template slot="title"></template>
 								<el-menu-item  v-for="(key,i) in item.menus" :key='i' :index="key.ipath">
-									<i class="iconfont icon-arrRight-fill"></i>{{key.name}}
+									<i class="iconfont el-icon-caret-right"></i>{{key.name}}
 								</el-menu-item>
 							</el-menu-item-group>
 						</el-submenu>

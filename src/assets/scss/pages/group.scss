@@ -1,0 +1,247 @@
+// 群组权限分配 start
+.assign-box {
+    .content-div-t {
+        padding-top: 20px;
+        // width: 800px;
+        .tree-box {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            .label {
+                text-align: right;
+                vertical-align: middle;
+                float: left;
+                font-size: 14px;
+                color: #606266;
+                line-height: 40px;
+                padding: 0 12px 0 0;
+                margin-left: 20px;
+                float: left;
+                span {
+                    color: #f56c6c;
+                    margin-right: 4px;
+                }
+            }
+            .tree-div {
+                float: left;
+                min-width: 600px;
+                min-height: 30px;
+                overflow: hidden;
+                .item-tree {
+                    min-width: 320px;
+                    height: auto;
+                    padding-left: 40px;
+                    margin-top: 10px;
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+//群组权限分配 end
+
+// 菜单栏管理 start
+.menu-box-p {
+    .wrap {
+        width: 44.5%;
+        float: left;
+        .tree-box {
+            width: 100%;
+            min-height: 400px;
+            max-height: 460px;
+            overflow: auto;
+            margin: 20px 0;
+            .tree-div {
+                max-width: 400px;
+                min-width: 80%;
+                // width: 80%;
+                box-sizing: border-box;
+                
+            }
+        }
+        .opp-box {
+            width: 100%;
+            height: 60px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .operating-box {
+            width: 100%;
+            min-height: 400px;
+            max-height: 460px;
+            overflow: auto;
+            margin: 20px 0;
+            padding: 10px 0;
+            .item-oppr {
+                height: 30px;
+                line-height: 30px;
+                width: 400px;
+                background: #fff;
+                border: 1px solid #1c86d4;
+                padding-left: 20px;
+                border-radius: 10px;
+                margin-top: 10px;
+                span.txt {
+                    display: inline-block;
+                    width: 250px;
+                    line-height: 28px;
+                    height: 28px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .oppting-click {
+                   background: #1c86d4;
+                   height: 100%;
+                   width: 60px;
+                   line-height: 28px;
+                   display: inline-block;
+                   float: right;
+                   color: #fff;
+                   text-align: center;
+                   cursor: pointer;
+                   border-top-right-radius: 8px;
+                   border-bottom-right-radius: 8px;
+                }
+                .opp-span-t {
+                   border-top-right-radius: 0;
+                   border-bottom-right-radius: 0;
+                }
+                .oppting-click:hover { background: #48affa;}
+            }
+            .item-oppr-default {
+                text-align: center;
+                font-size: 16px;
+                border-color: #999;
+                background: transparent;
+                line-height: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
+// 菜单栏管理 end
+
+.menu-p {
+    .wrap {
+        padding-bottom: 100px;
+    }
+    .input-select {
+        width: 60%;
+        position: relative;
+        .tree-pop {
+            position: absolute;
+            
+            z-index: 1;
+            width: 400px;
+            background: #fff;
+            padding: 10px ;
+            border: 1px solid #dcdfe6;
+            border-radius: 4px;
+            max-height: 380px;
+            overflow: auto;
+        }
+        input {
+            -webkit-appearance: none;
+            background-color: #fff;
+            background-image: none;
+            border-radius: 4px;
+            border: 1px solid #dcdfe6;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: #606266;
+            display: inline-block;
+            font-size: inherit;
+            height: 40px;
+            line-height: 1;
+            outline: 0;
+            font-size: 14px;
+            padding: 0 15px;
+            -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+            transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+            width: 100%;
+            cursor: pointer;
+        }
+        input::placeholder {
+            color: #ccc;
+        }
+        input:hover {
+            border-color: #ccc;
+        }
+        input.is-disabled {
+            background-color: #f5f7fa;
+            border-color: #e4e7ed;
+            color: #737273;
+            cursor: not-allowed;
+        }
+        .input_icon {
+            color: #c0c4cc;
+            font-size: 14px;
+            transition: transform .3s;
+            transform: rotate(180deg);
+            line-height: 40px;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 0;
+            text-align: center;
+            color: #c0c4cc;
+            transition: all .3s;
+            pointer-events: none;
+        }
+        .is-reverse {
+            transform: rotate(0deg);
+        }
+        
+    }
+    .is-error {
+        input:hover {
+            border-color: #f56c6c;
+        }
+        .error-input {
+            border-color: #f56c6c;
+        }
+    }
+    .select-icon {
+        i {
+            font-size: 18px;
+            color: #2267b4;
+        }
+    }
+    .default-tree {
+        text-align: center;
+        font-size: 16px;
+        color: #999;
+        width: 100%;
+        display: block;
+    }
+    .tree-item-none {
+        width: 340px;
+        min-height: 30px;
+        display: inline-block;
+        line-height: 30px;
+        padding-left: 20px;
+        color: #fff;
+        font-size: 14px;
+        border-radius: 10px;
+        background: #1c86d4;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-left: 36px;
+    }
+    .tree-item-none:hover,.tree-item-none.active {
+        background: #48affa;
+    }
+}
+
+.univesal-box {
+    overflow: hidden;
+    
+    .wrap {
+        width: 47%;
+        float: left;
+        .content-header {
+            padding-right: 0;
+        }
+    }
+}

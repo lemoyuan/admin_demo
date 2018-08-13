@@ -1,0 +1,92 @@
+.community-box {
+    .content-div-t {
+        .mt {
+            margin-top: 30px;
+        }
+        .form {
+            max-width: 1000px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #beeaf7;
+            margin-bottom: 20px;
+            overflow: hidden;
+            .div-item-txt-a {
+                margin: 20px;
+                margin-right: 0;
+                span:first-child {
+                    margin-right: 30px;
+                }
+                .content {
+                    display: inline-block;
+                    border: 1px solid #ddd;
+                    width: 800px;
+                    height: auto;
+                    overflow: hidden;
+                    padding: 20px;
+                    vertical-align: top;
+                }
+                a {
+                    padding: 0 20px;
+                    color: #0080ff;
+                    cursor: pointer;
+                    margin-left: 20px;
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .content-header {
+        .title {
+            display: inline-block;
+            max-width: 800px;
+        }
+        .bj-span {
+            color: #259b24;
+            padding: 2px 20px;
+            margin-right: 10px;
+            border: 1px solid #259b24;
+            line-height: 30px;
+            cursor: pointer;
+        }
+        .active {
+            color: #fff;
+            background: #259b24;
+        }
+    }
+    .content {
+        .thumbsUp-box {
+            margin: 10px 0;
+            padding-left: 20px;
+            max-height: 900px;
+            overflow: hidden;
+            .item {
+                width: 60px;
+                height: 90px;
+                margin: 5px 15px;
+                cursor: pointer;
+                float: left;
+                .img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        height: 60px;
+                    }
+                }
+                p {
+                    width: 60px;
+                    height: 30px;
+                    line-height: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .item:hover p { color: #0080ff; }
+        }
+    }
+}

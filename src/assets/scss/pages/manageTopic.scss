@@ -1,0 +1,245 @@
+.manageTopic-box {
+    .title-div-v {
+        display: inline-block;
+        color: #0080ff;
+        margin-right: 20px;
+        padding: 0 5px;
+        border-radius: 5px;
+        line-height: 30px;
+        cursor: pointer;
+    }
+    .title-div-v.active,.title-div-v:hover {
+        background: #0080ff;
+        color: #fff;
+    }
+    #items  {
+        .download-item {
+            height: 25px;
+            border-bottom: 1px solid #bbb;
+            margin-left: 140px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            span {
+                width: 82%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+                font-size: 14px;
+            }
+            .download-a,.del-a {
+                display: inline-block;
+                color: #1d72f0;
+                padding: 0 10px;
+                cursor: pointer;
+                float: right;
+                font-size: 14px;
+            }
+        }
+        padding-top: 20px;
+        .qt-p {
+            color: #bbb;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .tips-input {
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            color: #787878;
+        }
+        .atlas-pic-content {
+            width: 836px;
+            height: 127px;
+            border: 1px dotted #bbbbbb;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            position: relative;
+            .lj-div-box {
+                width: 60%;
+                margin-left: 20px;
+                height: 108px;
+                float: left;
+                margin-top: 20px;
+                p.qt-p {
+                    font-size: 14px;
+                    line-height: 24px;
+                    height: 24px;
+                }
+            }
+            .banner-index {
+                position: absolute;
+                right: 5px;
+                bottom: 0px;
+                color:#bbbbbb;
+                z-index: 1;
+                display: inline-block;
+                line-height: 30px;
+                height: 30px;
+            }
+            .index {
+                line-height: 15px;
+                margin: 5px 10px;
+                display: inline-block;
+                float: left;
+            }
+            .del {
+                display: inline-block;
+                float: right;
+                margin: 20px;
+                margin-top: 40px;
+                cursor: pointer;
+            }
+            .del:hover {
+                font-size: 20px;
+            }
+            .add-pic {
+                width: 183px;
+                height: 108px;
+                background: #fff;
+                border: 1px dotted #bbbbbb;
+                border-radius: 5px;
+                cursor: pointer;
+                float: left;
+                margin: 8px 0;
+                display: flex;
+                flex-direction: column;
+                font-size: 43px;
+                color: #bbb;
+                text-align: center;
+                padding-top: 20px;
+                line-height: 42px;
+                margin-left: 10px;
+                span {
+                    color: #bbb;
+                    font-size: 14px;
+                }
+            }
+            img {
+                width: 183px;
+                height: 108px;
+                margin-top: 10px;
+                float: left;
+            }
+        }
+        .form {
+            overflow: hidden;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #beeaf7;
+            margin-bottom: 20px;
+            max-width: 1000px;
+        }
+        .topic-div-sx {
+            .item-txt-d,input {
+                width: 600px;
+                height: 40px;
+                line-height: 40px;
+                border: 1px solid #ddd;
+                padding: 0 10px;
+                padding-right: 30px;
+                overflow: hidden;
+                margin: 5px 0;
+            }
+            .input-div {
+                display: inline-block;
+                margin-right: 20px;
+                position: relative;
+                .iconfont {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+}
+.emergency-box {
+    .content-header {
+        padding-top: 8px;
+        .marking {
+            line-height: 25px;
+            span {
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 20px;
+                i {
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .title {
+            display: inline-block;
+            width: 80%;
+            color: #0080ff;
+            font-size: 16px;
+        }
+        .switch-box-tt .switch-div-t {
+            margin-left: 0;
+        }
+        .select-div-tt {
+            width: 140px;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+        .pic-message-box {
+            float: left;
+            margin-bottom: 6px;
+            .pic-item {
+               display: inline-block;
+               margin-right: 10px;
+               line-height: 30px;
+               color: #525e71;
+               min-width: 60px;
+               text-align: center;
+               border-bottom: 2px solid #ccc;
+               cursor: pointer;
+            }
+            .pic-item.active {
+                color: #259b24;
+                border-bottom-color: #259b24;
+            }
+        }
+    }
+    .tips-p {
+        color: #999;
+        font-size: 14px;
+        line-height: 25px;
+        margin-top: 30px;
+        clear: both;
+    }
+}
+
+.edit-rescue,.add-rescue {
+    .picture-group-box {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin-top: 20px;
+        .item {
+            width: 116px;
+            height: 90px;
+            position: relative;
+            margin: 0 6px 10px 0;
+            float: left;
+            img {
+                width: 116px;
+                height: 90px;
+                background: #beeaf7;
+            }
+            .del {
+                position: absolute;
+                top: -6px;
+                right: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+.add-rescue {
+    .switch-div-t {
+        margin-left: 0px;
+    }
+}

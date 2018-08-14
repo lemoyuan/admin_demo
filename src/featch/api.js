@@ -10,7 +10,7 @@ axios.defaults.timeout = 8000
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
 axios.defaults.withCredentials = true
 
-axios.defaults.baseURL = _.webSiter().api;
+axios.defaults.baseURL = "www.xxxxx.com/";
 
 var typeHttp = '';
 //POST传参序列化

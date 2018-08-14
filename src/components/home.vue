@@ -7,7 +7,7 @@
 		    </div>
 			<el-menu class="el-menu-vertical-demo" background-color="transparent" :style='{"min-height":minHeight}' @select="handleSelect"
 			 text-color="#fff" :unique-opened='true' >
-				<div v-for='(item_one,index_one) in menuList' :key='index_one'>
+				<div v-for='(item_one,index_one) in menuList' :key='index_one' v-if="menuShow == index_one">
 					<div class='menu-for' v-for='(item,index) in item_one.menus' :key='index'>
 						<el-menu-item :index="item.ipath" v-if='item.menus.length <= 0'>
 							<span slot="title">{{item.name}}</span>
@@ -28,7 +28,7 @@
 			</el-menu>
 	  	</div>
 	  	<div style="height: 100%;overflow: auto;min-width:1040px;width: 83%;" class='el-col-tac2'>
-			<head-top></head-top>
+			<head-top v-on:changeMenu="changeMenuIndex"></head-top>
 			<div style='margin-top: 160px;'>
 				<keep-alive>
 					<router-view></router-view>
@@ -46,6 +46,7 @@
 				// menuArray: menuList,
                 minHeight: '',
                 defaultActive:0,
+                menuShow:0,
                 menuList:[
                     {
                         name:"1111",
@@ -80,35 +81,38 @@
                            
                         ]
                     },
-                    // {
-                    //     name:"2222",
-                    //     menus:[
-                    //         {
-                    //              name:"a",
-                    //             menus:[
-                    //                 {
-                    //                     name:"aaaaaaa1",
-                    //                     menus:[
+                    {
+                        name:"2222",
+                        menus:[
+                            {
+                                 name:"c",
+                                menus:[
+                                    {
+                                        name:"c1",
+                                        ipath:"/c1",
+                                        menus:[
 
-                    //                     ]
-                    //                 },
-                    //                 {
-                    //                     name:"aaaaaaa2",
-                    //                     menus:[
+                                        ]
+                                    },
+                                    {
+                                        name:"c2",
+                                        ipath:"/c2",
+                                        menus:[
 
-                    //                     ]
-                    //                 },
-                    //             ]
-                    //         },
-                    //         {
-                    //              name:"b",
-                    //             menus:[
+                                        ]
+                                    },
+                                ]
+                            },
+                            {
+                                 name:"d",
+                                 ipath:"/d",
+                                menus:[
 
-                    //             ]
-                    //         }
+                                ]
+                            }
                            
-                    //     ]
-                    // }
+                        ]
+                    }
                 ]
 			}
 		},
@@ -138,7 +142,10 @@
 				// 	case 'b'://表单管理
 				// 		self.$router.push('/b');break;
 				// }
-            }
+            },
+            changeMenuIndex(date){
+                this.menuShow = date ;
+            },
 		
 		},
 		components: {

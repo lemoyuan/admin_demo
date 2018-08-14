@@ -1,7 +1,7 @@
 <template>
   <div class='header-div'>
     <div class='main_menu'>
-        <div class='menu-item' v-for="(item,index) in menuList" :key='index' :class='{"active": isActive == item.name}' @click="toHome(item)">{{item.name}}</div>
+        <div class='menu-item' v-for="(item,index) in menuList" :key='index' :class='{"active": isActive == item.name}' @click="toHome(item,index)">{{item.name}}</div>
     </div>
     <div class="dropdown">
         <el-dropdown @command="handleCommand">
@@ -26,65 +26,69 @@ export default {
            menuObj: '',
            isActive:"1111",
            menuList:[
-                    {
-                        name:"1111",
-                        menus:[
+                {
+                    name:"1111",
+                    menus:[
                             {
-                                 name:"a",
-                                menus:[
-                                    {
-                                        name:"aaaaaaa1",
-                                        menus:[
+                                name:"a",
+                                ipath:'/a',
+                            menus:[
 
-                                        ]
-                                    },
-                                    {
-                                        name:"aaaaaaa2",
-                                        menus:[
+                            ]
+                        },
+                        {
+                                name:"b",
+                            menus:[
+                                {
+                                    name:"b1",
+                                    ipath:"/b1",
+                                    menus:[
 
-                                        ]
-                                    },
-                                ]
-                            },
-                            {
-                                 name:"b",
-                                menus:[
+                                    ]
+                                },
+                                {
+                                    name:"b2",
+                                    ipath:"/b2",
+                                    menus:[
 
-                                ]
-                            }
-                           
-                        ]
-                    },
-                    {
-                        name:"2222",
-                        menus:[
-                            {
-                                 name:"a",
-                                menus:[
-                                    {
-                                        name:"aaaaaaa1",
-                                        menus:[
+                                    ]
+                                },
+                            ]
+                        },
+                        
+                        
+                    ]
+                },
+                {
+                    name:"2222",
+                    menus:[
+                        {
+                                name:"c",
+                            menus:[
+                                {
+                                    name:"c1",
+                                    menus:[
 
-                                        ]
-                                    },
-                                    {
-                                        name:"aaaaaaa2",
-                                        menus:[
+                                    ]
+                                },
+                                {
+                                    name:"c2",
+                                    menus:[
 
-                                        ]
-                                    },
-                                ]
-                            },
-                            {
-                                 name:"b",
-                                menus:[
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                                name:"d",
+                            menus:[
 
-                                ]
-                            }
-                           
-                        ]
-                    }
-                ]
+                            ]
+                        }
+                        
+                    ]
+                }
+            ],
         };
     },
     watch: {
@@ -107,8 +111,9 @@ export default {
     },
     methods: {   
           
-        toHome(item) {
+        toHome(item,ind) {
             this.isActive = item.name;
+            this.$emit('changeMenu',ind);
             // if (item.menus && item.menus[0] && item.menus[0].menus.length > 0) {
             //    this.$router.push(item.menus[0].menus[0].vuePath);
             // } else if (item.menus && item.menus[0]) {

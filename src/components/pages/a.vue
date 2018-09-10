@@ -2,6 +2,7 @@
   <div class='header-div'>
    aaaaaaaaaaaaaaaaaa
    aaaaaaaaaaaaaaa
+   分页器模块
    <br>
     <button @click=goPage>分页返回第一页</button>
      <div class="block">

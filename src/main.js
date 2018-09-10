@@ -7,6 +7,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import axios from 'axios'
 import store from './vuex/store'
+// var echarts = require('echarts');// 引入echarts
+import echarts from 'echarts'
+
+Vue.prototype.$echarts = echarts
 
 Vue.use(ElementUI);
 

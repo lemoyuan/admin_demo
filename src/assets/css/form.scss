@@ -1,0 +1,88 @@
+p,div,span{font-family:'微软雅黑'} 
+.el-button--small{
+  padding: 8px 15px;
+}
+.search-rou{
+    width: 188px;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    font-family: '微软雅黑';
+    margin-left: 10px;
+    font-size: 18px;
+    // font-weight: 700;
+    font-style: normal;
+    color: #666;
+    border-left: 5px solid rgba(240, 72, 68, 1);
+}
+.select-div-tt {
+    width:150px;
+    float: right;
+    margin: 12px 5px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+  .input-div-tt {
+    // width:130px;
+    float: right;
+    margin: 12px 5px;
+    margin-bottom: 8px;
+  }
+  .text-div-tt{
+    float: right;
+    font-size: 12px;
+    color:#504d4d;
+    margin: 15px 58px 0 0;
+  }
+  .date-div-box{
+    float: right;
+    margin: 12px 5px;
+    margin-bottom: 8px;
+  }
+  .button-div-tt {
+    // width:130px;
+    // vertical-align: middle;
+    float: right;
+    transform: translateY(3px);
+    margin: 9px 5px;
+    span{
+      color: #409EFF;
+      font-size: 13px;
+      line-height: 34px;
+      cursor: pointer;
+    }
+    // margin-bottom: 8px;
+  }
+  button{
+    cursor: pointer;
+  }
+  .search-row{
+    background-color: rgba(249, 249, 249, 1);
+  }
+  .el-col-line{
+    text-align: center;
+  }
+  .new_pag{
+      text-align: right;
+      margin-top:20px;
+  }
+  .getBack{
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    cursor: pointer;
+    i{
+      font-size: 30px;
+      color:green;
+    }
+  }
+
+
+  td div{
+    text-align: center;
+  }
+  th div{
+    text-align: center;
+  }
+  p { word-wrap:break-word; }

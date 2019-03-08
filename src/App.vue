@@ -1,25 +1,10 @@
 <template>
-  <div id="app">
-    <div id="content">
-      <transition name="el-fade-in-linear">
+  <div id="app" style="height: 100%;">
+    <transition>
+      <!-- <keep-alive> -->
         <router-view></router-view>
-      </transition>
-    </div>
+      <!-- </keep-alive> -->
+    </transition>
   </div>
 </template>
 
-
-<script>
-export default {
-  name: 'app',
-  computed: {
-
-  },
-  components: {
-  }
-}
-</script>
-
-<style lang="scss">
-@import './assets/scss/main.scss';
-</style>

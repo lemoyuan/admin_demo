@@ -1,47 +1,58 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '../components/home.vue'
-import a from '../components/pages/a.vue'
-import b2 from '../components/pages/b2.vue'
-import b1 from '../components/pages/b1.vue'
-import login from '../components/login.vue'
-import NotFoundComponent from '../components/NotFoundComponent.vue'
+// import HelloWorld from '@/components/HelloWorld'
+import LoginView from '@/views/login/index'
+import Home from '@/views/home/index'
+import bannerList from '@/views/image/bannerList.vue'
+import menuManage from '@/views/tags/menuManage.vue'
+import videoList from '@/views/video/videoList.vue'
+import acticleList from '@/views/media/acticleList.vue'
+import centerService from '@/views/tags/centerService.vue'
 
 Vue.use(Router)
 
 export default new Router({
-    // mode:'history',
-    // base: __dirname,
-    routes: [
+  routes: [
+    
+    {
+      path: '/login',
+      name: "login",
+      component: LoginView,
+      meta: { requiresAuth: false }
+    },
+    {
+      path: '/',
+      name: '',
+      component: Home,
+      children:[
         {
-            path: '/login',
-            name: 'login',
-            component: login,
+          path: "/",
+          name:'',
+          redirect:'bannerList',
+          meta: { requiresAuth: true }
         },
-        { path: '*', component: NotFoundComponent },
         {
-            path: '/',
-            name: 'home',
-            component: home,
-            redirect: '/a',
-            children:[
-                {
-                    path: '/a',
-                    name: 'a',
-                    component: a,
-                },
-                {
-                    path: '/b1',
-                    name: 'b1',
-                    component: b1,
-                },
-                {
-                    path: '/b2',
-                    name: 'b2',
-                    component: b2,
-                },
-            ]
-        },
-
-    ]
+          path: '/bannerList',
+          name: "bannerList",
+          component: bannerList,
+        },{
+          path: '/menuManage',
+          name: "menuManage",
+          component: menuManage,
+        },{
+          path: '/centerService',
+          name: "centerService",
+          component: centerService,
+        },{
+          path: '/acticleList',
+          name: "acticleList",
+          component: acticleList,
+        },{
+          path: '/videoList',
+          name: "videoList",
+          component: videoList,
+        }
+      ]
+    },
+  ]
 })

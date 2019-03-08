@@ -2,20 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import store from './store'
 import router from './router'
+import axios from 'axios'
+
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import axios from 'axios'
-import store from './vuex/store'
-// var echarts = require('echarts');// 引入echarts
-import echarts from 'echarts'
 
-Vue.prototype.$echarts = echarts
-
-Vue.use(ElementUI);
-
-Vue.config.productionTip = false;
-/* 图片上传处理 start */
 const http = axios.create({
   timeout: 1000,
   headers: {
@@ -29,8 +22,11 @@ const http = axios.create({
   }
 })
 window.$http = Vue.prototype.$http = http;
+Vue.config.productionTip = false
 Vue.prototype.$axios = axios
 axios.defaults.withCredentials = true
+
+Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({

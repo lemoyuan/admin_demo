@@ -1,0 +1,46 @@
+td div{
+    text-align: center;
+  }
+  th div{
+    text-align: center;
+  }
+  .el-dialog {
+    top: 50% !important;
+    transform: translate(0,-50%);
+    margin-top:0!important;
+    
+  }
+  .el-dialog__header{
+    background-color: #2d314e;
+    height: 40px;
+    padding: 0!important;
+    
+  }
+  .el-dialog__headerbtn .el-dialog__close {
+    color:#fff;
+}
+.el-dialog__title{
+  color:#fff;
+  font-size: 16px;
+  line-height: 39px;
+  margin-left: 20px;
+}
+.el-dialog__headerbtn{
+  top: 14px;
+}
+.user-detail{
+  letter-spacing: 1px!important;
+  
+}
+.user-detail p span{
+  height:18px!important;
+}
+.search-row {
+  background-color: #fff!important;
+}
+.el-menu{
+  border-right: solid 1px #e6e6e6!important;
+}
+.el-menu--inline{
+  border-right:none!important;
+}

@@ -1,0 +1,18 @@
+export const iconJson = {
+    general:'general.png',
+    show:'show.png',
+    media:'media.png',
+    user:'user.png',
+    project:'project.png',
+    check:'check.png',
+    static:'static.png',
+    activity:'activity.png',
+    property:'property.png',
+    order:'order.png',
+    backstage:'backstage.png',
+    system:'system.png',
+    t_media:'t_media.png',
+    t_property:'t_property.png',
+    t_system:'t_system.png',
+    t_static:'t_static.png',
+}
